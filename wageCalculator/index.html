@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Wage Calculator</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <form id="hourForm">
+        <label for="hours"> Please input your hourly wage, hours, and tax rate(decimal)</label>
+        <input type="number" name="salary" id="hourlyWage" step="0.01" required placeholder="Per Hour">
+        <input type="number" name="hours" id="hours" step="0.01" required placeholder="Amount of hours">
+        <input type="number" name="taxRate" id="taxRate" step="0.01" min="0.01" max="0.99" required placeholder="Tax rate">
+        <button type="submit">Click to get the total amount</button>
+    </form>
+    <div id="errorStatement"></div>
+    <div id="totalHours"></div>
+    <div id="afterTax"></div>
+    <script src="/hoursCalculator/script.js"></script>
+</body>
+
+</html>
