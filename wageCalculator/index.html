@@ -10,11 +10,13 @@
 
 <body>
     <form id="hourForm">
-        <label for="hours" class="header"> <div class="header">Please input your hourly wage, hours, and tax rate(decimal)</div></label>
-        <input type="number" name="salary" id="hourlyWage" step="0.01" required placeholder="Per Hour">
-        <input type="number" name="hours" id="hours" step="1" min="1" required placeholder="Amount of hours">
-        <input type="number" name="taxRate" id="taxRate" step="0.01" min="0.01" max="0.99" required placeholder="Tax rate">
-        <button type="submit">Click to get the total amount</button>
+        <div class="container">
+            <label for="hours" class="header"> <div class="header">Please input your hourly wage, hours, and tax rate(decimal)</div></label>
+            <input type="number" inputmode="numeric" name="salary" id="hourlyWage" step="0.01" required placeholder="Per Hour"> <!--inputmode="numeric" is used to target mobile users so the keypad is opened automatically-->
+            <input type="number" inputmode="numeric" name="hours" id="hours" step="1" min="1" required placeholder="Amount of hours">
+            <input type="number" inputmode="numeric" name="taxRate" id="taxRate" step="0.01" min="0.01" max="0.99" required placeholder="Tax rate">
+            <button class="button" type="submit">Click to get the total amount</button>
+        </div>
     </form>
     <div id="errorStatement"></div>
     <div id="totalHours"></div>

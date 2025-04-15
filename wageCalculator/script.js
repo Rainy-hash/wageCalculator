@@ -1,5 +1,11 @@
 const taxRateInput = document.getElementById("taxRate");
 
+taxRateInput.addEventListener("focus", function () {
+  if (!this.value || this.value === "0") {
+    this.value = "0.01"; 
+  }
+});
+
 taxRateInput.addEventListener("change", function () {
   let taxRate = parseFloat(this.value);
 
@@ -22,7 +28,7 @@ document.getElementById("hourForm").addEventListener("submit", function (event) 
     let hours = parseFloat(document.getElementById("hours").value);
     let taxRate = parseFloat(document.getElementById("taxRate").value);
 
-    // If hourly wage and hours are negative this alert will appear
+    // If hourly wage and hours are negative this will appear on your device
     if (hourlyWage < 0 || hours < 0) {
       alert("All inputs must be positive");
       return;
